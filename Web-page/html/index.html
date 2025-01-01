@@ -66,32 +66,44 @@
     }
 
     /* Hero Section */
-    .hero_section {
-      min-height: 80vh;
-      display: flex;
-      align-items: center;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
-      background-size: cover;
-      background-position: center;
-      padding-top: 80px;
-      text-align: center;
-      color: var(--text-light);
-    }
+.hero_section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  padding-top: 80px;
+}
 
-    .hero_content {
-      padding: 2rem;
-    }
+.hero_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
 
-    .hero_content h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-    }
+.hero_content {
+  text-align: left;
+  padding: 2rem;
+  color: var(--text-light);
+}
 
-    .hero_content p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+.hero_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .hero_container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero_content {
+    text-align: center;
+  }
+}
 
     /* Grid Layout */
     .grid_section {
@@ -215,14 +227,19 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero_section">
-    <div class="container">
+<section id="home" class="hero_section">
+  <div class="container">
+    <div class="hero_container">
       <div class="hero_content">
         <h1>Offshore Innovation</h1>
         <p>Connecting Norwegian startups to global markets with expertise in ICT, Medicine, and Oil & Gas</p>
       </div>
+      <div>
+        <img src="images/hero-image.jpg" alt="Offshore Innovation" class="hero_image">
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Grid Section -->
   <section class="grid_section">
