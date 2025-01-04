@@ -15,7 +15,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-
   <style>
     :root {
       --primary-color: #1a5f7a;
@@ -69,44 +68,44 @@
     }
 
     /* Hero Section */
-.hero_section {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  background: var(--primary-color);
-  padding-top: 80px;
-}
+    .hero_section {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: var(--primary-color);
+      padding-top: 80px;
+    }
 
-.hero_container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
+    .hero_container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
 
-.hero_content {
-  text-align: left;
-  padding: 2rem;
-  color: var(--text-light);
-}
+    .hero_content {
+      text-align: left;
+      padding: 2rem;
+      color: var(--text-light);
+    }
 
-.hero_image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
+    .hero_image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
 
-@media (max-width: 768px) {
-  .hero_container {
-    grid-template-columns: 1fr;
-  }
-  
-  .hero_content {
-    text-align: center;
-  }
-}
+    @media (max-width: 768px) {
+      .hero_container {
+        grid-template-columns: 1fr;
+      }
+
+      .hero_content {
+        text-align: center;
+      }
+    }
 
     /* Grid Layout */
     .grid_section {
@@ -135,13 +134,7 @@
       border-radius: 4px;
       margin-bottom: 1rem;
     }
-    .grid_heading {
-      grid-column: 2 / 4; /* Span the heading across the second and third columns */
-      text-align: center;
-      background-color: #0078D7; /* Example background color */
-      color: white;
-      padding: 10px 0;
-     }
+
     .grid_item h3 {
       color: var(--primary-color);
       margin: 1rem 0;
@@ -210,6 +203,7 @@
         padding: 1rem;
       }
     }
+
     /* Section Headings */
     .section-heading {
       font-size: 1.5rem;
@@ -265,8 +259,7 @@
       transform: translateY(-10px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
-
-</style>
+  </style>
 </head>
 
 <body>
@@ -282,47 +275,47 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-    <li class="nav-item dropdown">
-      <a
-        class="nav-link dropdown-toggle"
-        href="#"
-        id="projectsDropdown"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        Projects
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
-        <li><a class="dropdown-item" href="#agriculture">Agriculture</a></li>
-        <li><a class="dropdown-item" href="#sports">Sports</a></li>
-        <li><a class="dropdown-item" href="#education">Education</a></li>
-        <li><a class="dropdown-item" href="#ict">ICT</a></li>
-        <li><a class="dropdown-item" href="#advisory">Advisory</a></li>
-      </ul>
-    </li>
-  </ul>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="projectsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                <li><a class="dropdown-item" href="#agriculture">Agriculture</a></li>
+                <li><a class="dropdown-item" href="#sports">Sports</a></li>
+                <li><a class="dropdown-item" href="#education">Education</a></li>
+                <li><a class="dropdown-item" href="#ict">ICT</a></li>
+                <li><a class="dropdown-item" href="#advisory">Advisory</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-<section id="home" class="hero_section">
-  <div class="container">
-    <div class="hero_container">
-      <div class="hero_content">
-        <h1>Offshore Innovation</h1>
-        <p>is a Norwegian registered company which has invested in, and provide consultancy and advise related innovative projects in Technology, Agriculture and Fisheries.</p>
-      </div>
-      <div class="carousel">
-        <img src="images/home-image.png" alt="Offsmas" class="hero_image" id="carousel-image">
+  <section id="home" class="hero_section">
+    <div class="container">
+      <div class="hero_container">
+        <div class="hero_content">
+          <h1>Offshore Innovation</h1>
+          <p>is a Norwegian registered company which has invested in, and provide consultancy and advise related innovative projects in Technology, Agriculture and Fisheries.</p>
+        </div>
+        <div class="carousel">
+          <img src="images/home-image.png" alt="Offsmas" class="hero_image" id="carousel-image">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Grid Section -->
   <section class="grid_section">
@@ -332,148 +325,145 @@
         <div class="grid_item">
           <h3>History</h3>
           <img src="images/home-image2.png" alt="Technology">
-          <p>Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by Hans Peter Christophersen. Offshore Innovation Ltd. was involved with supporting Norwegian start-up companies looking to UK and global markets. With support by the Norwegian Government through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established in the UK with a focus on ICT, Health and Energy.  </p>
+          <p>Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by Hans Peter Christophersen. Offshore Innovation Ltd. was involved with supporting Norwegian start-up companies looking to UK and global markets. With support by the Norwegian Government through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established in the UK with a focus on ICT, Health and Energy.</p>
         </div>
-        
+
         <!-- Second Column -->
         <div class="grid_item">
           <h3>About Us</h3>
-          
           <img src="images/home-image3.png" alt="Our Mission">
           <p>One other key activity for Offshore Innovation Ltd. was to undertake the task as Worldwide sector coordinator for Innovation Norway, the Norwegian government organization to promote business and trade.</p>
         </div>
-        
+
         <!-- Third Column -->
         <div class="grid_item">
-          <h3>Our Impact</h3>          
+          <h3>Our Impact</h3>
           <img src="images/home-image4.png" alt="Success Stories">
-          <p>During the period 2006 to 2024 Hans Peter Christophersen was engaged with the Norwegian Government’s “Oil for Development” initiative, as an advisor and diplomat supporting developing countries to manage their petroleum resources.
-Offshore Innovation was reestablished in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as investor in agriculture and fisheries.</p>
+          <p>During the period 2006 to 2024 Hans Peter Christophersen was engaged with the Norwegian Government’s “Oil for Development” initiative, as an advisor and diplomat supporting developing countries to manage their petroleum resources. Offshore Innovation was reestablished in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as investor in agriculture and fisheries.</p>
         </div>
       </div>
     </div>
   </section>
-<section id="projects" class="grid_section">
-  <div class="container">
-    <div class="row text-center">
-      
-      <!-- Agriculture Section -->
-      <div class="col-md-4 mb-4">
-        <h4>Agriculture</h4>
-        <img src="images/home-image7.png" alt="Agriculture" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">Read More</button>
-      </div>
 
-      <!-- Sports Section -->
-      <div class="col-md-4 mb-4">
-        <h4>Sports</h4>
-        <img src="images/home-image8.png" alt="Sports" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">Read More</button>
-      </div>
-
-      <!-- Education Section -->
-      <div class="col-md-4 mb-4">
-        <h4>Education</h4>
-        <img src="images/home-image6.png" alt="Education" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">Read More</button>
-      </div>
-
-      <!-- ICT Section -->
-      <div class="col-md-4 mb-4">
-        <h4>ICT</h4>
-        <img src="images/home-image9.png" alt="ICT" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">Read More</button>
-      </div>
-
-      <!-- Advisory Section -->
-      <div class="col-md-4 mb-4">
-        <h4>Advisory</h4>
-        <img src="images/home-image5.png" alt="Advisory" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">Read More</button>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Modals -->
-  <!-- Agriculture Modal -->
-  <div class="modal fade" id="agricultureModal" tabindex="-1" aria-labelledby="agricultureModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="agricultureModalLabel">Agriculture</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <section id="projects" class="grid_section">
+    <div class="container">
+      <div class="row text-center">
+        <!-- Agriculture Section -->
+        <div class="col-md-4 mb-4">
+          <h4>Agriculture</h4>
+          <img src="images/home-image7.png" alt="Agriculture" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">Read More</button>
         </div>
-        <div class="modal-body">
-          <p>Offshore Innovation is a partner company with Amfri Farms, the first and foremost fully certified (demeter) organic farm in Africa south of Sahara.</p>
-          <a href="https://www.african-organic.com" target="_blank" class="btn btn-primary">african-organic</a>
+
+        <!-- Sports Section -->
+        <div class="col-md-4 mb-4">
+          <h4>Sports</h4>
+          <img src="images/home-image8.png" alt="Sports" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">Read More</button>
+        </div>
+
+        <!-- Education Section -->
+        <div class="col-md-4 mb-4">
+          <h4>Education</h4>
+          <img src="images/home-image6.png" alt="Education" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">Read More</button>
+        </div>
+
+        <!-- ICT Section -->
+        <div class="col-md-4 mb-4">
+          <h4>ICT</h4>
+          <img src="images/home-image9.png" alt="ICT" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">Read More</button>
+        </div>
+
+        <!-- Advisory Section -->
+        <div class="col-md-4 mb-4">
+          <h4>Advisory</h4>
+          <img src="images/home-image5.png" alt="Advisory" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">Read More</button>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Sports Modal -->
-  <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="sportsModalLabel">Sports</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Offshore Innovation cooperates with The Norwegian Football Academy to bring Africa's new talents to football.</p>
-          <a href="https://www.zfc-sports.com" target="_blank" class="btn btn-primary">More</a>
+    <!-- Modals -->
+    <!-- Agriculture Modal -->
+    <div class="modal fade" id="agricultureModal" tabindex="-1" aria-labelledby="agricultureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="agricultureModalLabel">Agriculture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation is a partner company with Amfri Farms, the first and foremost fully certified (demeter) organic farm in Africa south of Sahara.</p>
+            <a href="https://www.african-organic.com" target="_blank" class="btn btn-primary">african-organic</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Education Modal -->
-  <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="educationModalLabel">Education</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Offshore Innovation is engaged with the Norwegian supported “Nyenga Foundation” in Uganda, providing support to the young generation in education, agriculture and sports.</p>
-          <a href="https://www.nyenga.org" target="_blank" class="btn btn-primary">Nyenga Foundation</a>
+    <!-- Sports Modal -->
+    <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sportsModalLabel">Sports</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation cooperates with The Norwegian Football Academy to bring Africa's new talents to football.</p>
+            <a href="https://www.zfc-sports.com" target="_blank" class="btn btn-primary">More</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- ICT Modal -->
-  <div class="modal fade" id="ictModal" tabindex="-1" aria-labelledby="ictModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ictModalLabel">ICT</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.</p>
+    <!-- Education Modal -->
+    <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="educationModalLabel">Education</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation is engaged with the Norwegian supported “Nyenga Foundation” in Uganda, providing support to the young generation in education, agriculture and sports.</p>
+            <a href="https://www.nyenga.org" target="_blank" class="btn btn-primary">Nyenga Foundation</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Advisory Modal -->
-  <div class="modal fade" id="advisoryModal" tabindex="-1" aria-labelledby="advisoryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="advisoryModalLabel">Advisory</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Today Offshore Innovation is involved in providing advise and consultancy in technology as well as investment opportunities in the agriculture, fisheries and sports sectors. The picture is from a meeting with a delegation from the Benin Ministry of Water and Minerals at the Norwegian Offshore Directorate in 2024..</p>
+    <!-- ICT Modal -->
+    <div class="modal fade" id="ictModal" tabindex="-1" aria-labelledby="ictModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ictModalLabel">ICT</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Advisory Modal -->
+    <div class="modal fade" id="advisoryModal" tabindex="-1" aria-labelledby="advisoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="advisoryModalLabel">Advisory</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Today Offshore Innovation is involved in providing advise and consultancy in technology as well as investment opportunities in the agriculture, fisheries and sports sectors. The picture is from a meeting with a delegation from the Benin Ministry of Water and Minerals at the Norwegian Offshore Directorate in 2024..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer Section -->
   <footer class="footer_section">
@@ -515,7 +505,7 @@ Offshore Innovation was reestablished in 2024 as a Norwegian registered company 
     // Mobile menu toggle
     const navbarToggler = document.querySelector('.navbar-toggler');
     const navbarCollapse = document.querySelector('.navbar-collapse');
-    
+
     navbarToggler.addEventListener('click', () => {
       navbarCollapse.classList.toggle('show');
     });
