@@ -207,15 +207,17 @@
         padding: 1rem;
       }
     }
-      // List of images for the carousel
-    const images = [
+  </style>
+  <script>
+  // List of images for the carousel
+  const images = [
     "images/home-image.png",
     "images/home-image2.png",
     "images/home-image3.png",
     "images/home-image4.png"
-    ];
+  ];
 
-   let currentIndex = 0; // Start with the first image
+  let currentIndex = 0; // Start with the first image
   const imageElement = document.getElementById("carousel-image");
 
   // Function to update the image
@@ -226,7 +228,7 @@
 
   // Change the image every 3 seconds
   setInterval(updateImage, 3000);
-  </style>
+</script>
 </head>
 
 <body>
