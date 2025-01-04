@@ -207,6 +207,25 @@
         padding: 1rem;
       }
     }
+      // List of images for the carousel
+    const images = [
+    "images/home-image1.png",
+    "images/home-image2.png",
+    "images/home-image3.png",
+    "images/home-image4.png"
+    ];
+
+   let currentIndex = 0; // Start with the first image
+  const imageElement = document.getElementById("carousel-image");
+
+  // Function to update the image
+  function updateImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Cycle through images
+    imageElement.src = images[currentIndex];
+  }
+
+  // Change the image every 3 seconds
+  setInterval(updateImage, 3000);
   </style>
 </head>
 
@@ -240,8 +259,8 @@
         <h1>Offshore Innovation</h1>
         <p>is a Norwegian registered company which has invested in, and provide consultancy and advise related innovative projects in Technology, Agriculture and Fisheries.</p>
       </div>
-      <div>
-        <img src="images/home-image.png" alt="Offshore Innovation" class="hero_image">
+      <div class="carousel">
+        <img src="images/home-image1.png" alt="Offsmas" class="hero_image" id="carousel-image">
       </div>
     </div>
   </div>
