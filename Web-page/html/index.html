@@ -298,61 +298,130 @@ Offshore Innovation was reestablished in 2024 as a Norwegian registered company 
       </div>
     </div>
   </section>
-<!-- Add this content below your existing code -->
-<section id="agriculture" class="grid_section">
+<section id="projects" class="grid_section">
   <div class="container">
-    <h2>Agriculture</h2>
-    <p>Offshore Innovation invests in innovative agricultural technologies and practices to enhance productivity and sustainability.</p>
-    <div class="d-flex flex-column align-items-center">
-      <img src="images/agriculture.png" alt="Agriculture Image" class="hero_image" style="max-width: 400px;">
-      <a href="https://example-agriculture.com" target="_blank" class="btn btn-primary mt-3">Visit Agriculture Portal</a>
+    <div class="row text-center">
+      
+      <!-- Agriculture Section -->
+      <div class="col-md-4 mb-4">
+        <h4>Agriculture</h4>
+        <img src="images/agriculture.png" alt="Agriculture" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">Read More</button>
+      </div>
+
+      <!-- Sports Section -->
+      <div class="col-md-4 mb-4">
+        <h4>Sports</h4>
+        <img src="images/sports.png" alt="Sports" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">Read More</button>
+      </div>
+
+      <!-- Education Section -->
+      <div class="col-md-4 mb-4">
+        <h4>Education</h4>
+        <img src="images/education.png" alt="Education" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">Read More</button>
+      </div>
+
+      <!-- ICT Section -->
+      <div class="col-md-4 mb-4">
+        <h4>ICT</h4>
+        <img src="images/ict.png" alt="ICT" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">Read More</button>
+      </div>
+
+      <!-- Advisory Section -->
+      <div class="col-md-4 mb-4">
+        <h4>Advisory</h4>
+        <img src="images/advisory.png" alt="Advisory" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">Read More</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <!-- Agriculture Modal -->
+  <div class="modal fade" id="agricultureModal" tabindex="-1" aria-labelledby="agricultureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="agricultureModalLabel">Agriculture</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Offshore Innovation invests in innovative agricultural technologies and practices to enhance productivity and sustainability.</p>
+          <a href="https://example-agriculture.com" target="_blank" class="btn btn-primary">Visit Agriculture Portal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sports Modal -->
+  <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="sportsModalLabel">Sports</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Our sports projects aim to develop technologies that enhance athletic performance and community well-being.</p>
+          <a href="https://example-sports.com" target="_blank" class="btn btn-primary">Explore Sports Projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Modal -->
+  <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="educationModalLabel">Education</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>We focus on innovative solutions in education, promoting digital learning platforms and educational tools.</p>
+          <a href="https://example-education.com" target="_blank" class="btn btn-primary">Visit Education Portal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICT Modal -->
+  <div class="modal fade" id="ictModal" tabindex="-1" aria-labelledby="ictModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ictModalLabel">ICT</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.</p>
+          <a href="https://example-ict.com" target="_blank" class="btn btn-primary">Learn More About ICT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advisory Modal -->
+  <div class="modal fade" id="advisoryModal" tabindex="-1" aria-labelledby="advisoryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="advisoryModalLabel">Advisory</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Our advisory services support startups and established businesses in navigating international markets.</p>
+          <a href="https://example-advisory.com" target="_blank" class="btn btn-primary">Explore Advisory Services</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="sports" class="grid_section">
-  <div class="container">
-    <h2>Sports</h2>
-    <p>We foster innovation in sports technology, focusing on athlete performance and data-driven analysis.</p>
-    <div class="d-flex flex-column align-items-center">
-      <img src="images/sports.png" alt="Sports Image" class="hero_image" style="max-width: 400px;">
-      <a href="https://example-sports.com" target="_blank" class="btn btn-primary mt-3">Visit Sports Portal</a>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="grid_section">
-  <div class="container">
-    <h2>Education</h2>
-    <p>Supporting educational innovations and solutions that empower learning through technology.</p>
-    <div class="d-flex flex-column align-items-center">
-      <img src="images/education.png" alt="Education Image" class="hero_image" style="max-width: 400px;">
-      <a href="https://example-education.com" target="_blank" class="btn btn-primary mt-3">Visit Education Portal</a>
-    </div>
-  </div>
-</section>
-
-<section id="ict" class="grid_section">
-  <div class="container">
-    <h2>ICT</h2>
-    <p>Driving advancements in ICT to connect communities and enable businesses globally.</p>
-    <div class="d-flex flex-column align-items-center">
-      <img src="images/ict.png" alt="ICT Image" class="hero_image" style="max-width: 400px;">
-      <a href="https://example-ict.com" target="_blank" class="btn btn-primary mt-3">Visit ICT Portal</a>
-    </div>
-  </div>
-</section>
-
-<section id="advisory" class="grid_section">
-  <div class="container">
-    <h2>Advisory</h2>
-    <p>Offering expert consultancy services for startups and SMEs to scale globally.</p>
-    <div class="d-flex flex-column align-items-center">
-      <img src="images/advisory.png" alt="Advisory Image" class="hero_image" style="max-width: 400px;">
-      <a href="https://example-advisory.com" target="_blank" class="btn btn-primary mt-3">Visit Advisory Portal</a>
-    </div>
-  </div>
-</section>
   <!-- Footer Section -->
   <footer class="footer_section">
     <div class="container">
