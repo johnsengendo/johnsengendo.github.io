@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="Consulting, Offshore Innovation, Startups, Business Development" />
+  <meta name="description" content="Offshore Innovation specializes in connecting Norwegian startups to global markets with expertise in ICT, Medicine, Oil & Gas, and business development." />
+  <meta name="author" content="Offshore Innovation" />
+  <link rel="icon" href="images/Off-shore.png" type="image/png" />
+  <title>Offshore Innovation</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    :root {
+      --primary-color: #1a5f7a;
+      --secondary-color: #2c88b0;
+      --accent-color: #34a8da;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+      --background-light: #f5f9fa;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Header Styles */
+    .header_section {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar-brand img {
+      height: 90px;
+      width: auto;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .nav-link {
+      color: #2B6477 !important;
+      padding: 1rem !important;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+   /* Hero Section */
+.hero_section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  padding-top: 80px;
+  padding-left: 2rem; /* Add padding to the left */
+  padding-right: 2rem; /* Add padding to the right */
+}
+
+.hero_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px; /* Limit the width of the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.hero_content {
+  text-align: left;
+  padding: 2rem;
+  color: var(--text-light);
+}
+
+.hero_image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .hero_container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero_content {
+    text-align: center;
+  }
+}
+
+
+    /* Grid Layout */
+    .grid_section {
+      padding: 4rem 0;
+      background: var(--background-light);
+    }
+
+    .grid_container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .grid_item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .grid_item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+
+    .grid_item h3 {
+      color: var(--primary-color);
+      margin: 1rem 0;
+    }
+
+    .grid_item p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Footer */
+    .footer_section {
+      background: var(--primary-color);
+      color: var(--text-light);
+      padding: 3rem 0 1.5rem;
+    }
+
+    .footer_content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .social_icons {
+      margin-top: 1rem;
+    }
+
+    .social_icons a {
+      color: var(--text-light);
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .social_icons a:hover {
+      color: var(--accent-color);
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact_us {
+  text-align: right;
+}
+
+.footer_social {
+  text-align: left;
+  flex: 1; /* Ensure both sections are responsive */
+}
+
+.contact_us {
+  flex: 1;
+}
+
+    /* Contact Us Section */
+    .contact_us {
+      text-align: right;
+    }
+
+    .contact_us h4 {
+      margin-bottom: 1rem;
+    }
+
+    .contact_us p {
+      margin: 0.5rem 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .grid_container {
+        grid-template-columns: 1fr;
+      }
+
+      .footer_content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero_content h1 {
+        font-size: 2.5rem;
+      }
+
+      .contact_us {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .hero_content {
+        padding: 1rem;
+      }
+    }
+
+    /* Section Headings */
+    .section-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+    }
+
+    .section-heading:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    /* Read More Buttons */
+    .btn-read-more {
+      padding: 0.5rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid var(--primary-color);
+      border-radius: 30px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-read-more:hover {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Section Images */
+    .section-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Hover Effects for Section Container */
+    .col-md-4 {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .col-md-4:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header_section">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#home">
+          <img src="images/Off-shore.png" alt="Offshore Innovation Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#history">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="projectsDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                <li><a class="dropdown-item" href="#agriculture">Agriculture</a></li>
+                <li><a class="dropdown-item" href="#sports">Sports</a></li>
+                <li><a class="dropdown-item" href="#education">Education</a></li>
+                <li><a class="dropdown-item" href="#ict">ICT</a></li>
+                <li><a class="dropdown-item" href="#advisory">Advisory</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero_section">
+    <div class="container">
+      <div class="hero_container">
+        <div class="hero_content">
+          <h1>Offshore Innovation</h1>
+          <p>is a Norwegian registered company which has invested in, and provide consultancy and advise related innovative projects in Technology, Agriculture and Fisheries. reg. no. 933877604</p>
+        </div>
+        <div class="carousel">
+          <img src="images/home-image.png" alt="Offsmas" class="hero_image" id="carousel-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grid Section -->
+  <section class="grid_section">
+    <div class="container">
+      <div class="grid_container">
+        <!-- First Column -->
+        <div id="history" class="grid_item">
+          <h3>History</h3>
+          <img src="images/home-image2.png" alt="Technology">
+          <p>Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by Hans Peter Christophersen. Offshore Innovation Ltd. was involved with supporting Norwegian start-up companies looking to UK and global markets. With support by the Norwegian Government through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established in the UK with a focus on ICT, Health and Energy.</p>
+        </div>
+
+        <!-- Second Column -->
+        <div class="grid_item">
+          <h3>About Us</h3>
+          <img src="images/home-image3.png" alt="Our Mission">
+          <p>One other key activity for Offshore Innovation Ltd. was to undertake the task as Worldwide sector coordinator for Innovation Norway, the Norwegian government organization to promote business and trade.</p>
+        </div>
+
+        <!-- Third Column -->
+        <div class="grid_item">
+          <h3>Our Impact</h3>
+          <img src="images/home-image4.png" alt="Success Stories">
+          <p>During the period 2006 to 2024 Hans Peter Christophersen was engaged with the Norwegian Government’s “Oil for Development” initiative, as an advisor and diplomat supporting developing countries to manage their petroleum resources. Offshore Innovation was reestablished in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as investor in agriculture and fisheries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="grid_section">
+    <div class="container">
+      <div class="row text-center">
+        <!-- Agriculture Section -->
+        <div id="agriculture" class="col-md-4 mb-4">
+          <h4>Agriculture</h4>
+          <img src="images/home-image7.png" alt="Agriculture" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">Read More</button>
+        </div>
+
+        <!-- Sports Section -->
+        <div id="sports" class="col-md-4 mb-4">
+          <h4>Sports</h4>
+          <img src="images/home-image8.png" alt="Sports" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">Read More</button>
+        </div>
+
+        <!-- Education Section -->
+        <div id="education" class="col-md-4 mb-4">
+          <h4>Education</h4>
+          <img src="images/home-image6.png" alt="Education" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">Read More</button>
+        </div>
+
+        <!-- ICT Section -->
+        <div id="ict" class="col-md-4 mb-4">
+          <h4>ICT</h4>
+          <img src="images/home-image9.png" alt="ICT" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">Read More</button>
+        </div>
+
+        <!-- Advisory Section -->
+        <div id="advisory" class="col-md-4 mb-4">
+          <h4>Advisory</h4>
+          <img src="images/home-image5.png" alt="Advisory" class="img-fluid mb-2" style="max-width: 100%; height: 200px; object-fit: cover;">
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modals -->
+    <!-- Agriculture Modal -->
+    <div class="modal fade" id="agricultureModal" tabindex="-1" aria-labelledby="agricultureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="agricultureModalLabel">Agriculture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation is a partner company with Amfri Farms, the first and foremost fully certified (demeter) organic farm in Africa south of Sahara.</p>
+            <a href="https://www.african-organic.com" target="_blank" class="btn btn-primary">african-organic</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sports Modal -->
+    <div class="modal fade" id="sportsModal" tabindex="-1" aria-labelledby="sportsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sportsModalLabel">Sports</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation cooperates with The Norwegian Football Academy to bring Africa's new talents to football.</p>
+            <a href="https://www.zfc-sports.com" target="_blank" class="btn btn-primary">More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Modal -->
+    <div class="modal fade" id="educationModal" tabindex="-1" aria-labelledby="educationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="educationModalLabel">Education</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation is engaged with the Norwegian supported “Nyenga Foundation” in Uganda, providing support to the young generation in education, agriculture and sports.</p>
+            <a href="https://www.nyenga.org" target="_blank" class="btn btn-primary">Nyenga Foundation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ICT Modal -->
+    <div class="modal fade" id="ictModal" tabindex="-1" aria-labelledby="ictModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ictModalLabel">ICT</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advisory Modal -->
+    <div class="modal fade" id="advisoryModal" tabindex="-1" aria-labelledby="advisoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="advisoryModalLabel">Advisory</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Today Offshore Innovation is involved in providing advise and consultancy in technology as well as investment opportunities in the agriculture, fisheries and sports sectors. The picture is from a meeting with a delegation from the Benin Ministry of Water and Minerals at the Norwegian Offshore Directorate in 2024..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer_section">
+    <div class="container">
+      <div class="footer_content">
+        <div class="footer_social">
+          <h4>Connect With Us</h4>
+          <div class="social_icons">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="contact_us">
+          <h4>Contact Us</h4>
+          <p>Address: Elisenbergveien 20A, 0265 Oslo, Norway</p>
+          <p>Tel./whatsapp:  +47 99705017</p>
+          <p>Email: mail@offshore-innovation.com</p>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Offshore Innovation. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Mobile menu toggle
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navbarToggler.addEventListener('click', () => {
+      navbarCollapse.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
