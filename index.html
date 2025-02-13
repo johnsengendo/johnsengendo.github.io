@@ -91,8 +91,7 @@
 
     /* Upgraded Hero Text */
     .hero_text {
-      /* Slight translucent overlay to stand out on the blue background */
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255, 255, 255, 0.15); /* Slight translucent overlay */
       padding: 2rem;
       border-radius: 8px;
       max-width: 600px; /* Limit width for a more compact look */
@@ -209,6 +208,23 @@
     }
     .contact_us a:hover {
       color: var(--accent-color);
+    }
+    .linkedin-button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #0077b5; /* LinkedIn's primary color */
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .linkedin-button:hover {
+      background-color: #005c82; /* Darker LinkedIn color on hover */
+    }
+    .linkedin-button i {
+      margin-right: 0.3rem;
     }
     .copyright {
       text-align: center;
@@ -379,7 +395,7 @@
         <!-- Agriculture -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image5.png" alt="Agriculture" class="circle-image">
-          <h4>Agriculture</h4>
+          <h4>Consultancy</h4>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">
             Read More
           </button>
@@ -387,7 +403,7 @@
         <!-- Sports -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image6.png" alt="Sports" class="circle-image">
-          <h4>Sports</h4>
+          <h4>Education</h4>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">
             Read More
           </button>
@@ -395,7 +411,7 @@
         <!-- Education -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image7.png" alt="Education" class="circle-image">
-          <h4>Education</h4>
+          <h4>Agriculture</h4>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">
             Read More
           </button>
@@ -403,7 +419,7 @@
         <!-- ICT -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image8.png" alt="ICT" class="circle-image">
-          <h4>ICT</h4>
+          <h4>Sport</h4>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">
             Read More
           </button>
@@ -411,7 +427,7 @@
         <!-- Advisory -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image9.png" alt="Advisory" class="circle-image">
-          <h4>Advisory</h4>
+          <h4>ICT</h4>
           <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">
             Read More
           </button>
@@ -515,28 +531,38 @@
   <footer id="footer" class="footer_section">
     <div class="container">
       <div class="footer_content">
-        <!-- Social Icons (if you want them separate) -->
+        <!-- Social Icons -->
         <div class="footer_social">
           <h4>Connect With Us</h4>
           <div class="social_icons">
-            <!-- Existing icons, if you want them -->
+            <!-- Existing icons -->
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-envelope"></i></a>
           </div>
+          <!-- NEW LinkedIn Button below "Connect With Us" -->
+          <a
+            href="https://www.linkedin.com/in/YOUR-LINKEDIN-PROFILE"
+            target="_blank"
+            class="linkedin-button"
+          >
+            <i class="fa fa-linkedin"></i> Connect on LinkedIn
+          </a>
         </div>
 
         <!-- Contact Us -->
         <div class="contact_us">
           <h4>Contact Us</h4>
-          <p>Address: Elisenbergveien 20A, 0265 Oslo, Norway</p>
-          <p>Tel./WhatsApp: +47 99705017</p>
-          <p>Email: mail@offshore-innovation.com</p>
-          <!-- LinkedIn link under Contact Us -->
+          <p>Address: nnnnnnn</p>
+          <p>Tel./WhatsApp: htgsffs</p>
+          <p>Email: heygvsfg</p>
+          <!-- If you want a second LinkedIn link under Contact Us, you can keep it, or remove it. -->
+          <!--
           <p>
             <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-PROFILE" target="_blank" class="text-white">
               <i class="fa fa-linkedin"></i> LinkedIn
             </a>
           </p>
+          -->
         </div>
       </div>
       <div class="copyright">
