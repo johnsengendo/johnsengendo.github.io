@@ -88,17 +88,46 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
+
+    /* Upgraded Hero Text */
     .hero_text {
-      flex: 1 1 45%;
+      /* Slight translucent overlay to stand out on the blue background */
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 600px; /* Limit width for a more compact look */
       margin-bottom: 1rem;
     }
     .hero_text h1 {
-      color: #fff;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow */
     }
     .hero_text p {
-      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #f0f0f0; /* Slightly lighter text color */
     }
+    /* Optional CTA Button Style */
+    .btn-hero {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--accent-color);
+      color: #fff;
+      border-radius: 30px;
+      padding: 0.6rem 1.5rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: none;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .btn-hero:hover {
+      background-color: var(--secondary-color);
+    }
+
     .hero_carousel {
       flex: 1 1 45%;
       background: #fff;       /* White background for the carousel */
@@ -110,6 +139,19 @@
       height: auto;
       object-fit: cover;
       border-radius: 6px;
+    }
+
+    /* About Us Section */
+    .about_section {
+      padding: 4rem 0;
+      background-color: var(--background-light);
+    }
+    .about_section .row {
+      align-items: center;
+    }
+    .about_section .about-image {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
     }
 
     /* Projects Section */
@@ -162,6 +204,12 @@
     .contact_us {
       text-align: right;
     }
+    .contact_us a {
+      text-decoration: none;
+    }
+    .contact_us a:hover {
+      color: var(--accent-color);
+    }
     .copyright {
       text-align: center;
       margin-top: 2rem;
@@ -186,6 +234,12 @@
       .hero_text, .hero_carousel {
         flex: 1 1 100%;
         margin-bottom: 1rem;
+      }
+      .about_section .row {
+        flex-direction: column;
+      }
+      .about_section .col-md-6:not(:last-child) {
+        margin-bottom: 2rem;
       }
     }
   </style>
@@ -229,6 +283,9 @@
           Established in 2015 (UK) to support Norwegian start-ups looking to global markets.
           Today reestablished in Norway focusing on tech consultancy and investment.
         </p>
+        <!-- Optional CTA Button (Uncomment if you want it)
+        <a href="#aboutus" class="btn-hero">Learn More</a>
+        -->
       </div>
 
       <!-- Carousel Side -->
@@ -276,28 +333,42 @@
     </div>
   </section>
 
-  <!-- About Us Section (Optional) -->
-  <section id="aboutus" class="py-5">
+  <!-- About Us Section -->
+  <section id="aboutus" class="about_section">
     <div class="container">
-      <h2>About Us</h2>
-      <p>
-        Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by
-        Hans Peter Christophersen. Offshore Innovation Ltd. was involved in supporting Norwegian
-        start-up companies looking to UK and global markets. With support by the Norwegian Government
-        through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established
-        in the UK with a focus on ICT, Health, and Energy.
-      </p>
-      <p>
-        One key activity was to undertake the task as Worldwide sector coordinator for Innovation Norway,
-        the Norwegian government organization to promote business and trade.
-      </p>
-      <p>
-        During the period 2006 to 2024, Hans Peter Christophersen was engaged with the Norwegian
-        Government’s “Oil for Development” initiative, as an advisor and diplomat supporting
-        developing countries to manage their petroleum resources. Offshore Innovation was reestablished
-        in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as
-        investor in agriculture and fisheries.
-      </p>
+      <div class="row">
+        <!-- Image Column -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <!-- Replace with any relevant About Us image -->
+          <img 
+            src="images/home-image2.png"
+            alt="About Us"
+            class="img-fluid about-image"
+          >
+        </div>
+        <!-- Text Column -->
+        <div class="col-md-6">
+          <h2>About Us</h2>
+          <p>
+            Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by
+            Hans Peter Christophersen. Offshore Innovation Ltd. was involved in supporting Norwegian
+            start-up companies looking to UK and global markets. With support by the Norwegian Government
+            through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established
+            in the UK with a focus on ICT, Health, and Energy.
+          </p>
+          <p>
+            One key activity was to undertake the task as Worldwide sector coordinator for Innovation Norway,
+            the Norwegian government organization to promote business and trade.
+          </p>
+          <p>
+            During the period 2006 to 2024, Hans Peter Christophersen was engaged with the Norwegian
+            Government’s “Oil for Development” initiative, as an advisor and diplomat supporting
+            developing countries to manage their petroleum resources. Offshore Innovation was reestablished
+            in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as
+            investor in agriculture and fisheries.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -444,18 +515,28 @@
   <footer id="footer" class="footer_section">
     <div class="container">
       <div class="footer_content">
+        <!-- Social Icons (if you want them separate) -->
         <div class="footer_social">
           <h4>Connect With Us</h4>
           <div class="social_icons">
+            <!-- Existing icons, if you want them -->
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-envelope"></i></a>
           </div>
         </div>
+
+        <!-- Contact Us -->
         <div class="contact_us">
           <h4>Contact Us</h4>
-          <p>Address: nnnnnnn</p>
-          <p>Tel./WhatsApp: htgsffs</p>
-          <p>Email: heygvsfg</p>
+          <p>Address: Elisenbergveien 20A, 0265 Oslo, Norway</p>
+          <p>Tel./WhatsApp: +47 99705017</p>
+          <p>Email: mail@offshore-innovation.com</p>
+          <!-- LinkedIn link under Contact Us -->
+          <p>
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-PROFILE" target="_blank" class="text-white">
+              <i class="fa fa-linkedin"></i> LinkedIn
+            </a>
+          </p>
         </div>
       </div>
       <div class="copyright">
