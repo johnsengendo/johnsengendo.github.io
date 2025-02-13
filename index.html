@@ -9,7 +9,7 @@
   <meta name="author" content="Offshore Innovation" />
   <title>Offshore Innovation</title>
 
-  <!-- Bootstrap and Fonts -->
+  <!-- Bootstrap & Fonts -->
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
   <style>
     :root {
-      --primary-color: #1a5f7a;
+      --primary-color: #1a5f7a;    /* Blue-ish background */
       --secondary-color: #2c88b0;
       --accent-color: #34a8da;
       --text-light: #ffffff;
@@ -49,47 +49,67 @@
       padding: 1rem 0;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
     .navbar {
       padding: 0;
     }
-
     .navbar-brand img {
       height: 90px;
       width: auto;
     }
-
     .navbar-nav {
       margin-left: auto;
     }
-
     .nav-link {
       color: #2B6477 !important;
       padding: 1rem !important;
       transition: color 0.3s ease;
     }
-
     .nav-link:hover {
       color: var(--accent-color) !important;
     }
 
-    /* Hero (Carousel) Section */
+    /* Hero Section */
     .hero_section {
-      position: relative;
-      min-height: 80vh;
-      padding-top: 80px; /* Account for fixed header */
-      background-color: var(--primary-color);
+      background-color: var(--primary-color); /* Blue background */
       color: var(--text-light);
+      min-height: 80vh;      /* Adjust as needed */
+      padding-top: 100px;    /* Leave room for fixed header */
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
     }
-    .carousel-inner img {
+    .hero_container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
       width: 100%;
-      height: 70vh; /* Adjust as needed */
-      object-fit: cover;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
-    .carousel-caption {
-      background: rgba(0,0,0,0.4);
+    .hero_text {
+      flex: 1 1 45%;
+      margin-bottom: 1rem;
+    }
+    .hero_text h1 {
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .hero_text p {
+      color: #fff;
+    }
+    .hero_carousel {
+      flex: 1 1 45%;
+      background: #fff;       /* White background for the carousel */
+      border-radius: 8px;
       padding: 1rem;
-      border-radius: 0.5rem;
+    }
+    .hero_carousel img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
     }
 
     /* Projects Section */
@@ -97,16 +117,14 @@
       padding: 4rem 0;
       background: var(--background-light);
     }
-
     .circle-image {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      margin: 0 auto 1rem; /* center the image and add bottom spacing */
+      margin: 0 auto 1rem;
     }
-
     .btn-primary {
       background-color: var(--primary-color);
       border: none;
@@ -125,6 +143,9 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+    }
+    .footer_social h4, .contact_us h4 {
+      margin-bottom: 1rem;
     }
     .social_icons {
       margin-top: 1rem;
@@ -148,7 +169,7 @@
       border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* Responsive Design */
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
       .footer_content {
         flex-direction: column;
@@ -159,14 +180,18 @@
         text-align: center;
         margin-top: 2rem;
       }
-      .carousel-inner img {
-        height: auto;
+      .hero_container {
+        flex-direction: column;
+      }
+      .hero_text, .hero_carousel {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
       }
     }
   </style>
 </head>
-
 <body>
+
   <!-- Header Section -->
   <header class="header_section">
     <div class="container">
@@ -189,77 +214,89 @@
     </div>
   </header>
 
-  <!-- Hero Carousel Section -->
+  <!-- Hero Section with Side-by-Side Text & Carousel -->
   <section id="home" class="hero_section">
-    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators (optional) 
-      <ol class="carousel-indicators">
-        <li data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></li>
-        <li data-bs-target="#homeCarousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#homeCarousel" data-bs-slide-to="2"></li>
-        <li data-bs-target="#homeCarousel" data-bs-slide-to="3"></li>
-      </ol>
-      -->
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <img src="images/home-image.png" class="d-block w-100" alt="Slide 1">
-          <div class="carousel-caption">
-            <h5>Offshore Innovation</h5>
-            <p>
-              A Norwegian registered company investing in and providing consultancy on innovative projects in Technology, Agriculture, and Fisheries. 
-            </p>
+    <div class="hero_container">
+      <!-- Text Side -->
+      <div class="hero_text">
+        <h1>Offshore Innovation</h1>
+        <p>
+          A Norwegian registered company which has invested in and provides consultancy
+          and advice related to innovative projects in Technology, Agriculture, and Fisheries.
+          Reg. no. 933877604.
+        </p>
+        <p>
+          Established in 2015 (UK) to support Norwegian start-ups looking to global markets.
+          Today reestablished in Norway focusing on tech consultancy and investment.
+        </p>
+      </div>
+
+      <!-- Carousel Side -->
+      <div class="hero_carousel">
+        <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img src="images/home-image.png" class="d-block" alt="Slide 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img src="images/home-image2.png" class="d-block" alt="Slide 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img src="images/home-image3.png" class="d-block" alt="Slide 3">
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <img src="images/home-image4.png" class="d-block" alt="Slide 4">
+            </div>
           </div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <img src="images/home-image2.png" class="d-block w-100" alt="Slide 2">
-          <div class="carousel-caption">
-            <h5>Our History</h5>
-            <p>
-              Established as a UK-registered company in 2015, Offshore Innovation supported Norwegian start-ups with a global focus on ICT, Health, and Energy.
-            </p>
-          </div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <img src="images/home-image3.png" class="d-block w-100" alt="Slide 3">
-          <div class="carousel-caption">
-            <h5>Worldwide Coordination</h5>
-            <p>
-              Key activities included serving as a Worldwide Sector Coordinator for Innovation Norway, promoting Norwegian business and trade abroad.
-            </p>
-          </div>
-        </div>
-        <!-- Slide 4 -->
-        <div class="carousel-item">
-          <img src="images/home-image4.png" class="d-block w-100" alt="Slide 4">
-          <div class="carousel-caption">
-            <h5>Our Impact</h5>
-            <p>
-              From 2006 to 2024, Offshore Innovation supported the Norwegian Government’s “Oil for Development” initiative, advising developing countries in petroleum resource management.
-            </p>
-          </div>
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#homeCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-      <!-- Carousel controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
   </section>
 
-  <!-- About Us (Optional Section) -->
+  <!-- About Us Section (Optional) -->
   <section id="aboutus" class="py-5">
     <div class="container">
       <h2>About Us</h2>
       <p>
-        Offshore Innovation was re-established in 2024 as a Norwegian-registered company (933 877 604), focusing on technology consultancy as well as investments in agriculture and fisheries.
+        Offshore Innovation was established as a UK registered company No. 5751115 in 2015 by
+        Hans Peter Christophersen. Offshore Innovation Ltd. was involved in supporting Norwegian
+        start-up companies looking to UK and global markets. With support by the Norwegian Government
+        through Innovation Norway, five centers to facilitate for the Norwegian start-ups were established
+        in the UK with a focus on ICT, Health, and Energy.
+      </p>
+      <p>
+        One key activity was to undertake the task as Worldwide sector coordinator for Innovation Norway,
+        the Norwegian government organization to promote business and trade.
+      </p>
+      <p>
+        During the period 2006 to 2024, Hans Peter Christophersen was engaged with the Norwegian
+        Government’s “Oil for Development” initiative, as an advisor and diplomat supporting
+        developing countries to manage their petroleum resources. Offshore Innovation was reestablished
+        in 2024 as a Norwegian registered company (933 877 604) as a technology consultancy as well as
+        investor in agriculture and fisheries.
       </p>
     </div>
   </section>
@@ -268,7 +305,7 @@
   <section id="projects" class="projects_section">
     <div class="container">
       <div class="row text-center">
-        <!-- Example: Agriculture -->
+        <!-- Agriculture -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image5.png" alt="Agriculture" class="circle-image">
           <h4>Agriculture</h4>
@@ -276,7 +313,7 @@
             Read More
           </button>
         </div>
-        <!-- Example: Sports -->
+        <!-- Sports -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image6.png" alt="Sports" class="circle-image">
           <h4>Sports</h4>
@@ -284,7 +321,7 @@
             Read More
           </button>
         </div>
-        <!-- Example: Education -->
+        <!-- Education -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image7.png" alt="Education" class="circle-image">
           <h4>Education</h4>
@@ -292,7 +329,7 @@
             Read More
           </button>
         </div>
-        <!-- Example: ICT -->
+        <!-- ICT -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image8.png" alt="ICT" class="circle-image">
           <h4>ICT</h4>
@@ -300,7 +337,7 @@
             Read More
           </button>
         </div>
-        <!-- Example: Advisory -->
+        <!-- Advisory -->
         <div class="col-md-4 mb-4">
           <img src="images/home-image9.png" alt="Advisory" class="circle-image">
           <h4>Advisory</h4>
@@ -321,7 +358,8 @@
           </div>
           <div class="modal-body">
             <p>
-              Offshore Innovation is a partner with Amfri Farms, the first fully certified (demeter) organic farm in Africa south of the Sahara.
+              Offshore Innovation is a partner company with Amfri Farms, the first and foremost
+              fully certified (demeter) organic farm in Africa south of Sahara.
             </p>
             <a href="https://www.african-organic.com" target="_blank" class="btn btn-primary">african-organic</a>
           </div>
@@ -338,7 +376,8 @@
           </div>
           <div class="modal-body">
             <p>
-              Offshore Innovation cooperates with The Norwegian Football Academy to bring Africa's new talents to the world of football.
+              Offshore Innovation cooperates with The Norwegian Football Academy to bring
+              Africa's new talents to football.
             </p>
             <a href="https://www.zfc-sports.com" target="_blank" class="btn btn-primary">More</a>
           </div>
@@ -355,7 +394,9 @@
           </div>
           <div class="modal-body">
             <p>
-              Offshore Innovation is engaged with the Norwegian-supported “Nyenga Foundation” in Uganda, providing support in education, agriculture, and sports.
+              Offshore Innovation is engaged with the Norwegian supported “Nyenga Foundation”
+              in Uganda, providing support to the young generation in education, agriculture,
+              and sports.
             </p>
             <a href="https://www.nyenga.org" target="_blank" class="btn btn-primary">Nyenga Foundation</a>
           </div>
@@ -371,7 +412,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <p>Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.</p>
+            <p>
+              Offshore Innovation pioneers ICT advancements, creating smart solutions for global challenges.
+            </p>
           </div>
         </div>
       </div>
@@ -386,7 +429,10 @@
           </div>
           <div class="modal-body">
             <p>
-              Today, Offshore Innovation advises on technology and invests in agriculture, fisheries, and sports. This photo is from a meeting with a delegation from the Benin Ministry of Water and Minerals at the Norwegian Offshore Directorate in 2024.
+              Today Offshore Innovation is involved in providing advice and consultancy in technology
+              as well as investment opportunities in the agriculture, fisheries, and sports sectors.
+              The picture is from a meeting with a delegation from the Benin Ministry of Water and Minerals
+              at the Norwegian Offshore Directorate in 2024.
             </p>
           </div>
         </div>
@@ -408,7 +454,7 @@
         <div class="contact_us">
           <h4>Contact Us</h4>
           <p>Address: nnnnnnn</p>
-          <p>Tel./Whatsapp: htgsffs</p>
+          <p>Tel./WhatsApp: htgsffs</p>
           <p>Email: heygvsfg</p>
         </div>
       </div>
