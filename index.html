@@ -153,26 +153,36 @@
       border-radius: 8px;
     }
 
-    /* Projects Section */
-    .projects_section {
-      padding: 4rem 0;
-      background: var(--background-light);
-    }
-    .circle-image {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-    .btn-primary {
-      background-color: var(--primary-color);
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: var(--secondary-color);
-    }
+/* Projects Section */
+.projects_section {
+  padding: 4rem 0;
+  background: var(--background-light);
+}
+
+.square-image-container {
+  width: 100%;
+  padding-top: 100%; /* Maintains a 1:1 aspect ratio */
+  position: relative;
+}
+
+.square-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
 
     /* Footer */
     .footer_section {
@@ -388,52 +398,64 @@
     </div>
   </section>
 
-  <!-- Projects Section with Circular Images -->
-  <section id="projects" class="projects_section">
-    <div class="container">
-      <div class="row text-center">
-        <!-- Agriculture -->
-        <div class="col-md-4 mb-4">
-          <img src="images/home-image5.png" alt="Agriculture" class="circle-image">
-          <h4>Advisory</h4>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">
-            Read More
-          </button>
+<!-- Projects Section with Square Images -->
+<section id="projects" class="projects_section">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    <div class="row text-center">
+      <!-- Agriculture -->
+      <div class="col-md-4 mb-4">
+        <div class="square-image-container">
+          <img src="images/home-image5.png" alt="Agriculture" class="square-image">
         </div>
-        <!-- Sports -->
-        <div class="col-md-4 mb-4">
-          <img src="images/home-image6.png" alt="Sports" class="circle-image">
-          <h4>Education</h4>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">
-            Read More
-          </button>
+        <h4>Advisory</h4>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#advisoryModal">
+          Read More
+        </button>
+      </div>
+      <!-- Sports -->
+      <div class="col-md-4 mb-4">
+        <div class="square-image-container">
+          <img src="images/home-image6.png" alt="Sports" class="square-image">
         </div>
-        <!-- Education -->
-        <div class="col-md-4 mb-4">
-          <img src="images/home-image7.png" alt="Education" class="circle-image">
-          <h4>Agriculture</h4>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">
-            Read More
-          </button>
+        <h4>Education</h4>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationModal">
+          Read More
+        </button>
+      </div>
+      <!-- Education -->
+      <div class="col-md-4 mb-4">
+        <div class="square-image-container">
+          <img src="images/home-image7.png" alt="Education" class="square-image">
         </div>
-        <!-- ICT -->
-        <div class="col-md-4 mb-4">
-          <img src="images/home-image8.png" alt="ICT" class="circle-image">
-          <h4>Sport</h4>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">
-            Read More
-          </button>
+        <h4>Agriculture</h4>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agricultureModal">
+          Read More
+        </button>
+      </div>
+      <!-- ICT -->
+      <div class="col-md-4 mb-4">
+        <div class="square-image-container">
+          <img src="images/home-image8.png" alt="ICT" class="square-image">
         </div>
-        <!-- Advisory -->
-        <div class="col-md-4 mb-4">
-          <img src="images/home-image9.png" alt="Advisory" class="circle-image">
-          <h4>ICT</h4>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">
-            Read More
-          </button>
+        <h4>Sport</h4>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sportsModal">
+          Read More
+        </button>
+      </div>
+      <!-- Advisory -->
+      <div class="col-md-4 mb-4">
+        <div class="square-image-container">
+          <img src="images/home-image9.png" alt="Advisory" class="square-image">
         </div>
+        <h4>ICT</h4>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ictModal">
+          Read More
+        </button>
       </div>
     </div>
+  </div>
+
 
     <!-- Modals -->
     <div class="modal fade" id="agricultureModal" tabindex="-1" aria-labelledby="agricultureModalLabel" aria-hidden="true">
