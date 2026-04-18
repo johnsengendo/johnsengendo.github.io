@@ -278,6 +278,38 @@
       transition: color 0.2s;
       padding: 0.4rem 0;
     }
+
+    .collab-intro {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 1.4rem;
+  font-style: italic;
+}
+
+.collab-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.collab-link {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.collab-link:hover {
+  color: var(--warm);
+  border-color: var(--warm);
+}
     .social-link svg { flex-shrink: 0; transition: transform 0.2s; }
     .social-link:hover { color: var(--accent); }
     .social-link:hover svg { transform: translateY(-2px); }
@@ -371,6 +403,31 @@
 
     </div>
   </section>
+  <!-- ── COLLABORATIONS ── -->
+<section>
+  <div class="section-label">Collaborations</div>
+  <p class="collab-intro">White paper collaborations on network digital twins</p>
+  <ul class="collab-list">
+    <li>
+      <a href="https://fondazione-restart.it/2025/05/23/network-digital-twin-work-concluded-on-the-first-white-paper-of-restarts-grand-challenge-4/" class="collab-link" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        Expose network infrastructure to services through network digital twins
+      </a>
+    </li>
+    <li>
+      <a href="https://fondazione-restart.it/it/2026/03/16/white-paper-on-network-digital-twins-la-ricerca-restart-verso-le-reti-del-futuro/" class="collab-link" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+        </svg>
+        Network Digital Twin Use Cases
+      </a>
+    </li>
+  </ul>
+</section>
 
   <!-- ── FOOTER ── -->
   <footer>
