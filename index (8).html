@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alan — ICT Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:     #1a1814;
+      --paper:   #f5f1ea;
+      --accent:  #2d5a8e;
+      --warm:    #c8832a;
+      --rule:    #d6cfc2;
+      --muted:   #7a7268;
+      --serif:   'DM Serif Display', Georgia, serif;
+      --mono:    'DM Mono', 'Courier New', monospace;
+      --body:    'Lora', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      line-height: 1.7;
+      min-height: 100vh;
+      /* Subtle paper grain */
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── Top rule ── */
+    .top-rule {
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--warm));
+    }
+
+    /* ── Header / Hero ── */
+    header {
+      padding: 5rem 0 4rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .photo-wrap {
+      position: relative;
+    }
+    .photo-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -6px -6px 6px 6px;
+      border: 2px solid var(--accent);
+      border-radius: 4px;
+      z-index: 0;
+    }
+    .photo-wrap img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      position: relative;
+      z-index: 1;
+      filter: sepia(12%) contrast(1.05);
+    }
+    /* Placeholder avatar shown when no real photo is present */
+    .photo-placeholder {
+      width: 160px;
+      height: 160px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #d6cfc2 0%, #b8b0a4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .photo-placeholder svg { opacity: 0.45; }
+    .photo-placeholder span {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-text {}
+    .hero-text .label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 0.6rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.1s forwards;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.25s forwards;
+    }
+    .intro {
+      font-size: 1.02rem;
+      color: #3a352e;
+      max-width: 500px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease 0.4s forwards;
+    }
+    .intro em { color: var(--accent); font-style: normal; font-weight: 500; }
+
+    /* ── Section ── */
+    section { padding: 4rem 0; border-top: 1px solid var(--rule); }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── Projects Grid ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease forwards;
+    }
+    .project-card:nth-child(1) { animation-delay: 0.1s; }
+    .project-card:nth-child(2) { animation-delay: 0.25s; }
+
+    .project-img-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 3px;
+      background: #e0d9d0;
+      aspect-ratio: 16 / 10;
+    }
+    .project-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease, filter 0.5s ease;
+      filter: sepia(8%) contrast(1.04);
+    }
+    .project-card:hover .project-img-wrap img {
+      transform: scale(1.04);
+      filter: sepia(0%) contrast(1.08);
+    }
+    .project-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(26,24,20,0.45));
+      pointer-events: none;
+    }
+
+    /* Placeholder for project images */
+    .project-img-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #e0d9d0, #c8c0b4);
+    }
+    .project-img-placeholder svg { opacity: 0.3; }
+    .project-img-placeholder span {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .paper-link {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .paper-link:hover {
+      color: var(--warm);
+      border-color: var(--warm);
+    }
+    .paper-link svg { flex-shrink: 0; }
+
+    /* ── Footer / Social ── */
+    footer {
+      padding: 3rem 0 4rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      text-decoration: none;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      padding: 0.4rem 0;
+    }
+    .social-link svg { flex-shrink: 0; transition: transform 0.2s; }
+    .social-link:hover { color: var(--accent); }
+    .social-link:hover svg { transform: translateY(-2px); }
+
+    /* ── Bottom accent ── */
+    .bottom-rule {
+      height: 3px;
+      background: linear-gradient(90deg, var(--warm), var(--accent));
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+      .photo-wrap { margin: 0 auto; }
+      .intro { margin: 0 auto; }
+      .projects-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-rule"></div>
+
+<div class="page-wrap">
+
+  <!-- ── HERO ── -->
+  <header>
+    <div class="photo-wrap">
+      <img src="profile.jpg" alt="Alan" />
+    </div>
+
+    <div class="hero-text">
+      <div class="label">Portfolio &amp; Research</div>
+      <h1>Alan</h1>
+      <p class="intro">
+        PhD candidate in <em>Information &amp; Communication Technology</em>,
+        specialising in <em>Digital Twins for Mobile Networks</em>. My research focuses on
+        synchronisation, prediction, and resilience of network digital twin systems.
+      </p>
+    </div>
+  </header>
+
+  <!-- ── PROJECTS ── -->
+  <section>
+    <div class="section-label">Selected Projects</div>
+
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="project1.jpg" alt="Enhancing Digital Twin Synchronization with PID Control" />
+        </div>
+        <div class="project-title">Enhancing Digital Twin Synchronization with PID Control</div>
+        <a href="#" class="paper-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Read Paper →
+        </a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-img-wrap">
+          <img src="project2.jpg" alt="A Prediction &amp; Protection Framework for Digital Twins" />
+        </div>
+        <div class="project-title">A Prediction &amp; Protection Framework for Digital Twins</div>
+        <a href="#" class="paper-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Read Paper →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-name">Alan · PhD Researcher · Digital Twins &amp; Mobile Networks</div>
+
+    <div class="social-links">
+
+      <!-- ResearchGate -->
+      <a href="https://www.researchgate.net/profile/YOUR_PROFILE" target="_blank" rel="noopener" class="social-link" title="ResearchGate">
+        <!-- ResearchGate "RG" wordmark-style icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.285 2H3.715A1.715 1.715 0 0 0 2 3.715v16.57A1.715 1.715 0 0 0 3.715 22h16.57A1.715 1.715 0 0 0 22 20.285V3.715A1.715 1.715 0 0 0 20.285 2zm-4.8 14.46h-1.56l-2.14-3.96h-.96v3.96H9.46V7.54h3.18c1.9 0 3.04.96 3.04 2.64 0 1.26-.68 2.1-1.8 2.44l2.6 4.84zM11.82 9.1h-1v2.36h1c.92 0 1.44-.44 1.44-1.2s-.52-1.16-1.44-1.16z"/>
+        </svg>
+        ResearchGate
+      </a>
+
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener" class="social-link" title="Google Scholar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 1L2 7l10 6 10-6-10-6zM2 17l10 6 10-6M2 12l10 6 10-6"/>
+          <!-- Scholar hat shape approximation -->
+          <path d="M5 9.5v5l7 4 7-4v-5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M2 7l10 6 10-6" fill="none" stroke="currentColor" stroke-width="0"/>
+        </svg>
+        Google Scholar
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+
+    </div>
+  </footer>
+
+</div><!-- /page-wrap -->
+
+<div class="bottom-rule"></div>
+
+</body>
+</html>
